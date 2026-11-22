@@ -11,7 +11,12 @@ from src.core.database import Base
 
 # Import all models for Alembic autogenerate detection
 from src.users.models import User  # noqa: F401
-from src.expenses.models import Expense, ExpenseSplit  # noqa: F401
+from src.expenses.models import ExpenseShare, SplitExpense  # noqa: F401
+from src.rooms.models import Room, RoomMember  # noqa: F401
+from src.settlements.models import Settlement  # noqa: F401
+from src.statements.models import BankStatement  # noqa: F401
+from src.analytics.models import BankTransaction  # noqa: F401
+from src.ai_chat.models import AIChatMessage  # noqa: F401
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
