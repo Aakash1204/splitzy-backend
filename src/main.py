@@ -22,6 +22,7 @@ from src.statements.router import statements_router
 from src.analytics.router import analytics_router, transactions_router
 from src.ai_chat.router import ai_router
 from src.dashboard.router import dashboard_router
+from src.image_to_text.image import router as extract_router
 
 
 @asynccontextmanager
@@ -70,6 +71,7 @@ app.include_router(analytics_router, prefix=settings.API_V1_PREFIX)
 app.include_router(transactions_router, prefix=settings.API_V1_PREFIX)
 app.include_router(ai_router, prefix=settings.API_V1_PREFIX)
 app.include_router(dashboard_router, prefix=settings.API_V1_PREFIX)
+app.include_router(extract_router)
 
 # Root aliases without prefix (functional for backwards-compatibility, hidden from Swagger to avoid duplicates)
 app.include_router(auth_router, include_in_schema=False)
